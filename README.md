@@ -1,7 +1,6 @@
 # SQL
-## _Beautiful_
 
-**SQL** postgres
+**SQL** _postgres_
 
 ## Создание БД с внешним ключом:
 
