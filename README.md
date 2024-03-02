@@ -1,27 +1,33 @@
 # SQL
 ## _Beautiful_
 
-One table
+**SQL** postgres
 
-**SQL** postgred.
-
-**** might be for you
-## Features
-
-## Dependencies
-
-*Ok* let's do it
-
-## How to use it with examples
-
-Imagine you have a database with a table called Person, defined like:
+## Создание БД с внешним ключом:
 
 ```sql
-CREATE TABLE person
+CREATE DATABASE cats_db;
+
+CREATE TABLE cats
 (
-    id         INT(10) AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    name       VARCHAR(20) NOT NULL,
-    email      VARCHAR(55) NOT NULL,
-    company_id int(10) NOT NULL
+    id         BIGSERIAL PRIMARY KEY,
+    cat        VARCHAR(99) NOT NULL,
+    id_shop    INTEGER,
+    FOREIGN KEY (id_shop) REFERENCES shops(id)
 );
+
+CREATE TABLE shops
+(
+    id         BIGSERIAL PRIMARY KEY,
+    shop       VARCHAR(99) NOT NULL
+);
+```
+
+## Пример LEFT JOIN 2-х таблиц кошки и магазины:
+
+```sql
+SELECT     cat, shop
+FROM       cats
+LEFT JOIN  shops
+ON         shop_id=id;
 ```
