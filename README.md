@@ -11,7 +11,7 @@ CREATE TABLE cats
 (
     id         BIGSERIAL PRIMARY KEY,
     cat        VARCHAR(99) NOT NULL,
-    id_shop    INTEGER,
+    id_shop    INTEGER NOT NULL,
     FOREIGN KEY (id_shop) REFERENCES shops(id)
 );
 
