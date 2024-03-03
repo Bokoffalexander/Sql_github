@@ -9,6 +9,14 @@ CREATE DATABASE cats_db;
 ```
 
 ```sql
+CREATE TABLE shops
+(
+    id         BIGSERIAL PRIMARY KEY,
+    shop       VARCHAR(99) NOT NULL
+);
+```
+
+```sql
 CREATE TABLE cats
 (
     id         BIGSERIAL PRIMARY KEY,
@@ -16,14 +24,6 @@ CREATE TABLE cats
     id_shop    INTEGER NOT NULL,
 
     FOREIGN KEY (id_shop) REFERENCES shops(id)
-);
-```
-
-```sql
-CREATE TABLE shops
-(
-    id         BIGSERIAL PRIMARY KEY,
-    shop       VARCHAR(99) NOT NULL
 );
 ```
 
