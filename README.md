@@ -46,5 +46,5 @@ INSERT INTO cats VALUES (DEFAULT, 'Lapsik', 3);
 ```sql
 SELECT cat, shop
 FROM cats LEFT JOIN shops
-ON cats.shop_id = shops.id;
+ON cats.id_shop = shops.id;
 ```
