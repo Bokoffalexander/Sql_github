@@ -44,7 +44,5 @@ INSERT INTO cats VALUES (DEFAULT, 'Lapsik', 3);
 ## Пример LEFT JOIN 2-х таблиц кошки и магазины:
 
 ```sql
-SELECT cat, shop
-FROM cats LEFT JOIN shops
-ON cats.id_shop = shops.id;
+SELECT cat, shop FROM cats LEFT JOIN shops ON cats.id_shop = shops.id;
 ```
