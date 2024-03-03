@@ -41,10 +41,12 @@ INSERT INTO cats VALUES (DEFAULT, 'Barsik', 2);
 INSERT INTO cats VALUES (DEFAULT, 'Lapsik', 3);
 ```
 
-## Пример LEFT JOIN 2-х таблиц кошки и магазины:
+## Пример LEFT JOIN:
 
 ![](https://raw.githubusercontent.com/Bokoffalexander/Sql_github/main/LEFT_JOIN.png)
 
+## Запрос LEFT JOIN 2-х таблиц кошки и магазины:
+
 ```sql
-SELECT cat, shop FROM cats LEFT JOIN shops ON cats.id_shop = shops.id;
+SELECT cats.cat, shops.shop FROM cats LEFT JOIN shops ON cats.id_shop = shops.id;
 ```
