@@ -23,7 +23,7 @@ CREATE TABLE cats
     cat        VARCHAR(99) NOT NULL,
     id_shop    INTEGER NOT NULL,
 
-    FOREIGN KEY (id_shop) REFERENCES shops(id)
+    FOREIGN KEY (id_shop) REFERENCES shops(id) ON DELETE SET NULL
 );
 ```
 
@@ -48,5 +48,7 @@ INSERT INTO cats VALUES (DEFAULT, 'Lapsik', 3);
 ## Запрос LEFT JOIN 2-х таблиц кошки и магазины:
 
 ```sql
+
 SELECT cats.cat, shops.shop FROM cats LEFT JOIN shops ON cats.id_shop = shops.id;
+
 ```
