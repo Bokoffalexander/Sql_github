@@ -30,6 +30,7 @@ CREATE TABLE cats
 ## Вставим значения в таблицы:
 
 ```sql
+INSERT INTO shops VALUES (0, 'shop?');
 INSERT INTO shops VALUES (DEFAULT, 'Pets I love');
 INSERT INTO shops VALUES (DEFAULT, 'Pets are inside');
 INSERT INTO shops VALUES (DEFAULT, 'Pets are here');
